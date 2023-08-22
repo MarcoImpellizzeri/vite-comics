@@ -22,9 +22,22 @@ export default {
   -->
   <TheHeader />
 
-  <main></main>
+  <main>
+    <div class="my-container-top py-5">
+      <div class="container">
+        <h2>--&gt;Content goes here&lt;--</h2>
+      </div>
+    </div>
+  </main>
 
   <TheFooter />
 </template>
 
-<style></style>
+<style lang="scss">
+@use "styles/partials/variables" as *;
+
+.my-container-top {
+  background-color: #000;
+  color: $text-color-secondary;
+}
+</style>
