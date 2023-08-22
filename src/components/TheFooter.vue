@@ -125,6 +125,7 @@ footer {
             justify-content: space-between;
             align-items: center;
             color: $text-color-secondary;
+            height: 400px;
 
             >.left-side {
                 display: flex;
@@ -133,6 +134,20 @@ footer {
                     font-size: .8rem;
                     color: gray;
                 }
+            }
+
+            >.right-side {
+                overflow: hidden;
+                /* Nasconde le parti dell'immagine che eccedono il contenitore */
+                display: flex;
+                align-items: center;
+                /* Centra verticalmente l'immagine */
+                justify-content: center;
+                /* Centra orizzontalmente l'immagine */
+                height: 100%;
+                /* Altezza uguale a quella del my-c-top */
+                flex-shrink: 0;
+                /* Evita il restringimento dell'immagine */
             }
         }
     }
@@ -172,5 +187,4 @@ footer {
     a {
         text-decoration: none;
     }
-}
-</style>
+}</style>
