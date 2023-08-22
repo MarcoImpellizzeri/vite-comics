@@ -1,11 +1,13 @@
 <script>
 import TheHeader from "./components/TheHeader.vue"
 import TheFooter from "./components/TheFooter.vue"
+import NavBar from "./components/NavBar.vue"
 
 export default {
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    NavBar
   }
 }
 </script>
@@ -23,11 +25,12 @@ export default {
   <TheHeader />
 
   <main>
-    <div class="my-container-top py-5">
+    <div class="my-hero-section py-5">
       <div class="container">
         <h2>--&gt;Content goes here&lt;--</h2>
       </div>
     </div>
+    <NavBar />
   </main>
 
   <TheFooter />
@@ -36,7 +39,7 @@ export default {
 <style lang="scss">
 @use "styles/partials/variables" as *;
 
-.my-container-top {
+.my-hero-section {
   background-color: #000;
   color: $text-color-secondary;
 }
