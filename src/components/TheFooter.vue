@@ -2,6 +2,43 @@
 export default {
     components: {
 
+    },
+    data() {
+        return {
+            DcComicsLinks: [
+                { name: "Characters" },
+                { name: "Comics" },
+                { name: "Movies" },
+                { name: "Tv" },
+                { name: "Games" },
+                { name: "Videos" },
+                { name: "News" },
+            ],
+            ShopLinks: [
+                { name: "Shop Dc" },
+                { name: "Shop Collectables" },
+            ],
+            DCLinks: [
+                { name: "Terms Of Use" },
+                { name: "Privacy Policy(New)" },
+                { name: "AdChoice" },
+                { name: "Advertising" },
+                { name: "Jobs" },
+                { name: "Subscriptions" },
+                { name: "Talent Workshops" },
+                { name: "CPSC Certificates" },
+                { name: "Ratings" },
+                { name: "Shop Help" },
+                { name: "Contact Us" },
+            ],
+            SitesLinks: [
+                { name: "DC" },
+                { name: "Mad Magazine" },
+                { name: "DC Kids" },
+                { name: "DC Universe" },
+                { name: "DC Power Visa" },
+            ],
+        }
     }
 }
 </script>
@@ -14,44 +51,31 @@ export default {
                     <div class="pe-4">
                         <h4>DC COMICS</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#0">Characters</a></li>
-                            <li><a href="#0">Comics</a></li>
-                            <li><a href="#0">Movies</a></li>
-                            <li><a href="#0">TV</a></li>
-                            <li><a href="#0">Games</a></li>
-                            <li><a href="#0">Videos</a></li>
-                            <li><a href="#0">News</a></li>
+                            <li v-for="link in DcComicsLinks">
+                                <a href="#0">{{ link.name }}</a>
+                            </li>
                         </ul>
                         <h4>SHOP</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#0">Shop DC</a></li>
-                            <li><a href="#0">Shop DC Collectibles</a></li>
+                            <li v-for="link in ShopLinks">
+                                <a href="#0">{{ link.name }}</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="pe-4">
                         <h4>DC</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#0">Terms Of Use</a></li>
-                            <li><a href="#0">Privacy policy (New)</a></li>
-                            <li><a href="#0">Ad Choise</a></li>
-                            <li><a href="#0">Advertising</a></li>
-                            <li><a href="#0">Jobs</a></li>
-                            <li><a href="#0">Subscriptions</a></li>
-                            <li><a href="#0">Talent Workshops</a></li>
-                            <li><a href="#0">CPSC Certification</a></li>
-                            <li><a href="#0">Ratings</a></li>
-                            <li><a href="#0">Shop Help</a></li>
-                            <li><a href="#0">Contact Us</a></li>
+                            <li v-for="link in DCLinks">
+                                <a href="#0">{{ link.name }}</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <h4>SITES</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#0">DC</a></li>
-                            <li><a href="#0">MAD Magazine</a></li>
-                            <li><a href="#0">DC Kids</a></li>
-                            <li><a href="#0">DC Univers</a></li>
-                            <li><a href="#0">DC Power Visa</a></li>
+                            <li v-for="link in SitesLinks">
+                                <a href="#0">{{ link.name }}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
