@@ -11,7 +11,7 @@ export default {
         <div class="my-c-top">
             <div class="container">
                 <div class="left-side">
-                    <div class="pe-5">
+                    <div class="pe-4">
                         <h4>DC COMICS</h4>
                         <ul class="list-unstyled">
                             <li><a href="#0">Characters</a></li>
@@ -28,7 +28,7 @@ export default {
                             <li><a href="#0">Shop DC Collectibles</a></li>
                         </ul>
                     </div>
-                    <div class="pe-5">
+                    <div class="pe-4">
                         <h4>DC</h4>
                         <ul class="list-unstyled">
                             <li><a href="#0">Terms Of Use</a></li>
@@ -60,8 +60,29 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="my-c-bot">
-            <div class="container"></div>
+        <div class="my-c-bot py-4">
+            <div class="container">
+                <button class="btn btn-outline-primary fw-bold">SING-UP NOW!</button>
+
+                <div>
+                    <h4>FOLLOW US</h4>
+                    <a href="#0">
+                        <img src="../assets/img/footer-facebook.png" alt="Facebook logo">
+                    </a>
+                    <a href="#0">
+                        <img src="../assets/img/footer-twitter.png" alt="Twitter logo">
+                    </a>
+                    <a href="#0">
+                        <img src="../assets/img/footer-youtube.png" alt="YouToube logo">
+                    </a>
+                    <a href="#0">
+                        <img src="../assets/img/footer-pinterest.png" alt="Pinterest logo">
+                    </a>
+                    <a href="#0">
+                        <img src="../assets/img/footer-periscope.png" alt="Periscope logo">
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -83,13 +104,48 @@ footer {
 
             >.left-side {
                 display: flex;
+
+                a {
+                    font-size: .8rem;
+                    color: gray;
+                }
             }
         }
     }
 
+    .my-c-bot {
+        background-color: $color-secondary;
+
+        >.container {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                >h4 {
+                    margin: 0;
+                    padding-right: 10px;
+                    color: $color-primary;
+                }
+
+                a {
+                    padding: 0 10px 0 10px;
+                }
+            }
+        }
+    }
+
+    button {
+        color: $text-color-secondary;
+        border-radius: 0;
+        padding: .7rem;
+        border: 3px solid $color-primary;
+    }
+
     a {
-        font-size: .8rem;
-        color: gray;
         text-decoration: none;
     }
 }
