@@ -2,26 +2,35 @@
 export default {
     components: {
 
-    }
+    },
+    data() {
+        return {
+            navLinks: [
+                { name: 'CHARACTER', },
+                { name: 'COMICS', },
+                { name: 'MOVIES', },
+                { name: 'TV', },
+                { name: 'GAMES', },
+                { name: 'COLLECTIBLES', },
+                { name: 'VIDEOS', },
+                { name: 'FANS', },
+                { name: 'NEWS', },
+                { name: 'SHOP', },
+            ],
+        }
+    },
 }
 </script>
 
 <template>
     <header>
         <div class="container py-4">
-            <img src="../assets/img/dc-logo.png" alt="DC logo">
+            <a href="#0"><img src="../assets/img/dc-logo.png" alt="DC logo"></a>
 
             <ul class="nav nav-pills">
-                <li class="nav-imtem"><a href="#0" class="nav-link">CHARACTERS</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link active">COMICS</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">MOVIES</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">TV</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">GAMES</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">COLLECTIBLES</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">VIDEOS</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">FANS</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">NEWS</a></li>
-                <li class="nav-imtem"><a href="#0" class="nav-link">SHOP</a></li>
+                <li class="nav-imtem" v-for="link in navLinks">
+                    <a href="#0" class="nav-link" :class="{ 'active': link.name === 'COMICS' }">{{ link.name }}</a>
+                </li>
             </ul>
         </div>
     </header>
