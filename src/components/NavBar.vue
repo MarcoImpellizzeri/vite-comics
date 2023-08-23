@@ -71,6 +71,7 @@ export default {
 
 img {
     height: 60px;
+    max-width: 75px;
     padding-right: 10px;
 }
 

@@ -2,12 +2,20 @@
 import TheHeader from "./components/TheHeader.vue"
 import TheFooter from "./components/TheFooter.vue"
 import NavBar from "./components/NavBar.vue"
+import ComicsContainer from "./components/ComicsContainer.vue"
+import productsList from "./db/dc-comics.json"
 
 export default {
   components: {
     TheHeader,
     TheFooter,
-    NavBar
+    NavBar,
+    ComicsContainer
+  },
+  data() {
+    return {
+      productsList,
+    }
   }
 }
 </script>
@@ -27,9 +35,10 @@ export default {
   <main>
     <div class="my-hero-section py-5">
       <div class="container">
-        <h2>--&gt;Content goes here&lt;--</h2>
+        <h3>CURRENT SERIES</h3>
       </div>
     </div>
+    <ComicsContainer />
     <NavBar />
   </main>
 
@@ -39,8 +48,24 @@ export default {
 <style lang="scss">
 @use "styles/partials/variables" as *;
 
-.my-hero-section {
-  background-color: #000;
-  color: $text-color-secondary;
+main {
+  background-color: #1C1C1C;
+
+  .my-hero-section {
+    background-image: url(assets/img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+
+    h3 {
+      color: $text-color-secondary;
+      position: absolute;
+      bottom: -40px;
+      background-color: $color-primary;
+      padding: 1rem;
+      font-weight: bold;
+    }
+  }
 }
 </style>
