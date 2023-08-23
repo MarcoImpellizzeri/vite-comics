@@ -9,12 +9,14 @@ export default {
 
 <template>
     <div class="card">
-        <div class="img-container">
-            <img :src="imgSrc" class="card-img" alt="">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{ series }}</h5>
-        </div>
+        <a href="#0">
+            <div class="img-container">
+                <img :src="imgSrc" class="card-img" alt="">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ series }}</h5>
+            </div>
+        </a>
     </div>
 </template>
 
@@ -23,9 +25,12 @@ export default {
 
 .card {
     background-color: #1C1C1C !important;
-    color: $text-color-secondary;
     border: 0;
 
+    a {
+        text-decoration: none;
+        color: $text-color-secondary;
+    }
     .img-container {
         height: 200px;
         overflow: hidden;

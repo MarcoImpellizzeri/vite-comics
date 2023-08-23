@@ -53,6 +53,7 @@ export default {
         position: relative;
         border-radius: 0;
         font-size: .8rem;
+        font-weight: bold;
 
         &.active {
             color: $color-primary;
