@@ -33,6 +33,11 @@ export default {
                 },
             ],
         }
+    },
+    methods: {
+        getImagePath(img) {
+            return new URL(`${img}`, import.meta.url).href
+        }
     }
 }
 </script>
@@ -41,9 +46,9 @@ export default {
     <div class="my-navbar py-5">
         <div class="container">
             <ul>
-                <li class="list-unstyled" v-for="item in menuItems">
+                <li class="list-unstyled" v-for="(item, i) in menuItems" :key="`item_${i}`">
                     <a href="#0">
-                        <img :src="item.image" :alt='item.alt'>
+                        <img :src="getImagePath(item.image)" :alt='item.alt'>
                         {{ item.name }}
                     </a>
                 </li>

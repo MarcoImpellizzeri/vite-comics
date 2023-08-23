@@ -51,13 +51,13 @@ export default {
                     <div class="pe-4">
                         <h4>DC COMICS</h4>
                         <ul class="list-unstyled">
-                            <li v-for="link in DcComicsLinks">
+                            <li v-for="(link, i) in DcComicsLinks" :key="`link_${i}`">
                                 <a href="#0">{{ link.name }}</a>
                             </li>
                         </ul>
                         <h4>SHOP</h4>
                         <ul class="list-unstyled">
-                            <li v-for="link in ShopLinks">
+                            <li v-for="(link, i) in ShopLinks" :key="`link_${i}`">
                                 <a href="#0">{{ link.name }}</a>
                             </li>
                         </ul>
@@ -65,7 +65,7 @@ export default {
                     <div class="pe-4">
                         <h4>DC</h4>
                         <ul class="list-unstyled">
-                            <li v-for="link in DCLinks">
+                            <li v-for="(link, i) in DCLinks" :key="`link_${i}`">
                                 <a href="#0">{{ link.name }}</a>
                             </li>
                         </ul>
@@ -73,7 +73,7 @@ export default {
                     <div>
                         <h4>SITES</h4>
                         <ul class="list-unstyled">
-                            <li v-for="link in SitesLinks">
+                            <li v-for="(link, i) in SitesLinks" :key="`link_${i}`">
                                 <a href="#0">{{ link.name }}</a>
                             </li>
                         </ul>
@@ -141,9 +141,7 @@ footer {
                 /* Nasconde le parti dell'immagine che eccedono il contenitore */
                 display: flex;
                 align-items: center;
-                /* Centra verticalmente l'immagine */
                 justify-content: center;
-                /* Centra orizzontalmente l'immagine */
                 height: 100%;
                 /* Altezza uguale a quella del my-c-top */
                 flex-shrink: 0;

@@ -28,7 +28,7 @@ export default {
             <a href="#0"><img src="../assets/img/dc-logo.png" alt="DC logo"></a>
 
             <ul class="nav nav-pills">
-                <li class="nav-imtem" v-for="link in navLinks">
+                <li class="nav-imtem" v-for="(link, i) in navLinks" :key="`link_${i}`">
                     <a href="#0" class="nav-link" :class="{ 'active': link.name === 'COMICS' }">{{ link.name }}</a>
                 </li>
             </ul>
