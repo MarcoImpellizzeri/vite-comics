@@ -2,15 +2,15 @@
 import TheHeader from "./components/TheHeader.vue"
 import TheFooter from "./components/TheFooter.vue"
 import NavBar from "./components/NavBar.vue"
-import ComicsContainer from "./components/ComicsContainer.vue"
-import productsList from "./db/dc-comics.json"
+import ComicsCard from "./components/ComicsCard.vue"
+import productsList from "./db/dc-comics"
 
 export default {
   components: {
     TheHeader,
     TheFooter,
     NavBar,
-    ComicsContainer
+    ComicsCard
   },
   data() {
     return {
@@ -38,7 +38,17 @@ export default {
         <h3>CURRENT SERIES</h3>
       </div>
     </div>
-    <ComicsContainer />
+
+    <div class="comics-container">
+      <div class="container my-5">
+        <div class="row gy-4 pt-3">
+          <div class="col-2" v-for="(product, i) in productsList" :key="`product_${i}`">
+            <ComicsCard :img-src="product.thumb" :series="product.series" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <NavBar />
   </main>
 
@@ -56,16 +66,19 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    position: relative;
 
-    h3 {
-      color: $text-color-secondary;
-      position: absolute;
-      bottom: -40px;
-      background-color: $color-primary;
-      padding: 1rem;
-      font-weight: bold;
+    .container {
+      h3 {
+        color: $text-color-secondary;
+        position: absolute;
+        bottom: 41%;
+        left: 15%;
+        background-color: $color-primary;
+        padding: 1rem;
+        font-weight: bold;
+      }
     }
+
   }
 }
 </style>

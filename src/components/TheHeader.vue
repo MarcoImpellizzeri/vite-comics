@@ -45,13 +45,14 @@ export default {
     align-items: center;
 
     img {
-        width: 100px;
+        height: 80px;
     }
 
     .nav-link {
         color: $text-color-primary;
         position: relative;
         border-radius: 0;
+        font-size: .8rem;
 
         &.active {
             color: $color-primary;

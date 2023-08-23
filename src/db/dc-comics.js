@@ -1,4 +1,4 @@
-[
+const products = [
     {
         "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
         "price": "$19.99",
@@ -72,3 +72,5 @@
         "type": "graphic novel"
     }
 ]
+
+export default products;
