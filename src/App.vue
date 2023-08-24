@@ -51,6 +51,9 @@ export default {
           </div>
         </div>
       </div>
+      <div class="container d-flex justify-content-center">
+        <button class="btn btn-primary mb-3 px-5 rounded-0">LOAD MORE</button>
+      </div>
     </div>
 
     <NavBar />
